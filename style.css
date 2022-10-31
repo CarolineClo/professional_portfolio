@@ -288,6 +288,10 @@ main {
   background-image: url(images/gernercode.png);
 }
 
+#fonts_ui .visuals .img.tablet-img {
+  background-image: url(images/hogwartsmockup_tablet.png);
+}
+
 .main-text {
   margin-top: 3rem;
   max-width: 700px;
