@@ -65,8 +65,12 @@
       <div class="assignment_text">
         <img src="images/gamemockup.png" alt="a mock up of a laptop displaying a webpage" />
         <h2>Out<strong>line</strong></h2>
-        <p>A game for learning what belongs in the toilet. And what doesn't.</p>
-        <a href="https://carolineclo.github.io/hacked_hogwarts/" target="_blank"><button>Visit Page</button></a>
+        <p>
+          For this project I created a simple points based game with falling objects that the player can click on (or avoid clicking on) to stop the toilet from clogging and win the game. This was an in-depth introduction to the power of Javascript
+          and lesson in character development and story telling. The object of the game is to gain points by clicking on objects that shouldn’t be allowed to fall into the toilet, and avoiding clicking on the pee and poop characters which definitely
+          belong there. I had imagined this as a game for parent to play with their young kids who are potty trining as a fun way to open the dialogue of graduating form nappies to the potty.
+        </p>
+        <a href="https://carolineclo.dk/kea/basicanimation/poopinthetoilet/" target="_blank"><button>Visit Page</button></a>
       </div>
     </header>
     <main>
@@ -77,8 +81,8 @@
           <div class="img gameplay-img"></div>
           <h4>Ready player poo</h4>
           <p>
-            Each student has their own dynamic pop-up window responsive to tablet and mobile view. The pop-up displays a crest and background colour associated with their school house, and gives the user options to expel the student or add them to an
-            inquisitor squad, but only if they are the right kind of student.
+            The game play is simple enough for younger kids to play on a touch screen and for older kids to play on a touch pad or with a mouse. They player must click on the right characters as they fall to gain enough points before the timer runs
+            out. Also they have to be careful not to click on the wrong charcters, else they’ll run out toilet paper lives and make a big mess!
           </p>
         </article>
 
@@ -86,14 +90,16 @@
           <div class="img assets-img"></div>
           <h4>Assets</h4>
           <p>
-            To keep the school administrator on the right path, there are a number of warning triggers that pop up to give user feedback. Only two prefects can be appointed to each house and only certain students can be added to the inquisitor squad.
+            The game has 7 characters including the hungry toilet. Each character has a happy state and and a sad state and changes states when they reach the end of their journey depending or whether they were clicked on or not. The characters are
+            designed to be very child friendly, bright colours big wide eyes and a little bit of humour.
           </p>
         </article>
         <article class="visual_card">
           <div class="img gamecode-img"></div>
-          <h4>Sort and filter</h4>
+          <h4>Javascript functions</h4>
           <p>
-            The main focus of this project is writing functioning code for a positive user experience. The system fetches data from two Json files and uses functions to filter and sort the student list and populate the student info pop-up window.
+            The game is written in javascript and it was the first time I was exposed to this language. Each sprite has an event listener to change into their happy or sad state when clicked or left un-clicked, and there is a countdown timer made
+            with a css animation and a lives counter which counts down from three if mistakes are made. There are also hidden winning, loosing and instruction screens that revealed on user interaction.
           </p>
         </article>
       </div>
