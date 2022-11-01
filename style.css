@@ -292,6 +292,27 @@ main {
   background-image: url(images/hogwartsmockup_tablet.png);
 }
 
+#fonts_ui .visuals .img.warning-img {
+  background-image: url(images/hogwartmockup_warning.png);
+}
+
+#fonts_ui .visuals .img.data-img {
+  background-image: url(images/hogwartsdata.png);
+}
+
+#fonts_ui .visuals .img.gameplay-img {
+  background-image: url(images/gameplay_mockup.png);
+}
+
+#fonts_ui .visuals .img.assets-img {
+  background-image: url(images/game-assets.png);
+  background-position: center;
+}
+
+#fonts_ui .visuals .img.gamecode-img {
+  background-image: url(images/game-code.png);
+}
+
 .main-text {
   margin-top: 3rem;
   max-width: 700px;
