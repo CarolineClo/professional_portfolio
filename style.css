@@ -44,8 +44,7 @@ h1,
 h2,
 h3,
 h4,
-p,
-a {
+p {
   font-family: var(--sans-font);
   color: var(--darkest-colour);
 }
@@ -69,6 +68,8 @@ body {
   align-self: flex-end;
   padding-bottom: 0.8rem;
   padding-top: 2.5rem;
+  stroke: #fc6b09;
+  stroke-width: 4px;
 }
 
 #burger {
@@ -96,20 +97,26 @@ body {
   transform: translateY(-20px);
 }
 
+@keyframes line1 {
+  100% {
+    transform: translateY(-12px) rotate(45deg) translateX(18px);
+  }
+}
+@keyframes line2 {
+  100% {
+    transform: translateY(32px) rotate(-45deg) translateX(-35px);
+  }
+}
+
 #burger .line-1.close {
-  transform: translateY(-12px) rotate(45deg) translateX(18px);
+  animation: line1 1s;
+  animation-fill-mode: forwards;
 }
 
 #burger .line-2.close {
-  transform: translateY(32px) rotate(-45deg) translateX(-35px);
+  animation: line2 1s;
+  animation-fill-mode: forwards;
 }
-
-#logo .cls-1 {
-  stroke: var(--accent-colour);
-  stroke-width: 4px;
-}
-
-/* #burger .line-1 {translateY(-53px) rotate(45deg) translateX(52px);} */
 
 nav {
   /* border-bottom: var(--darkest-colour) 4px solid; */
@@ -153,15 +160,11 @@ nav {
   border-bottom: solid 1px var(--accent-colour);
 }
 
-/* 
-nav::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  background: var(--darkest-colour);
-  top: 100%;
-  width: 80%;
-} */
+.nav_drop a {
+  text-decoration: none;
+  font-family: var(--sans-font);
+  color: var(--darkest-colour);
+}
 
 /*//////  HEADER   ////////*/
 header {
@@ -183,25 +186,30 @@ header {
 }
 
 #squiggle1 {
+  /* fill: transparent;
+  stroke: #fc6b1d;*/
   width: 68vw;
   height: 26vh;
   justify-self: center;
   z-index: 1;
 }
 
-/* .speckle {
-  background: url("images/speckle3.png");
-  filter: blur(0.1rem);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: 200%;
-  height: 100%;
-  width: 95vw;
-  position: absolute;
-  top: -5%;
-  z-index: -1;
-  right: 0;
-} */
+#squiggle1 path {
+  fill: transparent;
+  stroke: #fc6b1d;
+  width: 68vw;
+  height: 26vh;
+  justify-self: center;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: animate-squiggle 2.2s ease-in-out forwards;
+}
+
+@keyframes animate-squiggle {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 
 .speckle {
   background: url(images/speckle3.webp);
@@ -274,6 +282,18 @@ header h2 strong {
   height: 24vh;
   width: 100%;
   z-index: 1;
+}
+
+#squiggle2 path {
+  fill: transparent;
+  stroke: #fc6b1d;
+  width: 68vw;
+  height: 26vh;
+  justify-self: center;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: animate-squiggle 2.2s ease-in-out forwards;
+  animation-delay: 1s;
 }
 
 #fonts_ui #squiggle3 {
@@ -375,6 +395,16 @@ a:hover {
   z-index: 1;
 }
 
+.main-text a {
+  text-decoration: none;
+  font-family: var(--sans-font);
+  color: var(--darkest-colour);
+}
+
+.main-text p {
+  margin-bottom: 1.25rem;
+}
+
 main h3 {
   font-size: 1.95rem;
   font-weight: 700;
@@ -384,12 +414,13 @@ main h3 {
 }
 
 .cards {
-  display: flex;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   justify-items: center;
   padding: 2rem;
   max-width: 1800px;
+
   z-index: 1;
 }
 
@@ -401,6 +432,7 @@ main h3 {
   border-radius: 4px;
   justify-content: space-between;
   box-shadow: 5px 4px 9px 2px rgb(22, 22, 22, 2%);
+  height: 100%;
   max-width: 276px;
 }
 
@@ -519,6 +551,7 @@ footer #logo {
     margin-bottom: 1rem;
   }
   .cards {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
