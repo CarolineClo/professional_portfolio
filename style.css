@@ -202,7 +202,7 @@ header {
   justify-self: center;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  animation: animate-squiggle 2.2s ease-in-out forwards;
+  animation: animate-squiggle 2.5s ease-in-out forwards;
 }
 
 @keyframes animate-squiggle {
@@ -325,23 +325,31 @@ a:hover {
   display: block;
 }
 #fonts_ui main h3 {
-  padding: 1rem 3rem;
+  padding: 1rem 4.44rem;
 }
 
 #fonts_ui .visuals {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  display: flex;
+  flex-direction: column;
   padding: 1rem 3rem;
-  gap: 3rem;
+  gap: 4.44rem;
   max-width: 1915px;
   margin: auto;
 }
 
-#fonts_ui .visual_card {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding-bottom: 2rem;
+#fonts_ui .visual_card:nth-child(odd) {
+  display: grid;
+  grid-template-columns: 52% 1fr;
+  gap: 4.44rem;
+  padding: 0;
+}
+
+#fonts_ui .visual_card:nth-child(even) {
+  display: grid;
+  grid-template-columns: 1fr 52%;
+  gap: 4.44rem;
+  padding: 0;
 }
 
 #fonts_ui .visuals .img {
@@ -349,6 +357,12 @@ a:hover {
   aspect-ratio: 1/0.65;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#fonts_ui .visuals .visuals_text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
 }
 
 #fonts_ui .visuals .img.mob-img {
@@ -492,6 +506,8 @@ footer h4 {
 
 footer a {
   color: var(--accent-colour);
+  font-family: var(--sans-font);
+  text-decoration: none;
 }
 
 footer a:hover {
@@ -601,6 +617,16 @@ footer #logo {
     flex-direction: column;
     gap: 1rem;
     padding: 0;
+  }
+
+  #fonts_ui .visual_card:nth-child(odd) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #fonts_ui .visual_card:nth-child(even) {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   footer {
