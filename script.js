@@ -2,7 +2,7 @@
 import { animate, inView } from "https://cdn.skypack.dev/motion";
 
 const blob = document.querySelector(".speckle");
-animate(blob, { transform: "translateX(-400px) translateY(100px) scale(1.5)" }, { duration: 6, repeat: Infinity, direction: "alternate" });
+animate(blob, { transform: "translateX(-400px) translateY(100px) scale(1.5)" }, { duration: 6, easing: "ease-in-out", repeat: Infinity, direction: "alternate" });
 
 const burger = document.querySelector("#burger");
 burger.addEventListener("click", showMenu);
