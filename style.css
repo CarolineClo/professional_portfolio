@@ -175,7 +175,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 1915px;
+  max-width: 1440px;
   margin: auto;
 }
 
@@ -187,8 +187,7 @@ header {
 }
 
 #squiggle1 {
-  /* fill: transparent;
-  stroke: #fc6b1d;*/
+  max-width: 1300px;
   width: 68vw;
   height: 26vh;
   justify-self: center;
